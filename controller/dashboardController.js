@@ -43,7 +43,6 @@ exports.stateList = async (req, res) => {
 
 exports.dashboardData = async (req, res) => {
   try {
-    console.log(req.query);
     const { state, fromDate, toDate } = req.query;
     fs.readFile("./public/sales.json", "utf8", (err, data) => {
       if (err) {
